@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #87CEEB, #E0F7FA);
+  font-family: 'Pacifico', cursive;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  touch-action: manipulation; /* melhora resposta no mobile */
+}
+
+.game-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  max-width: 600px;     /* limite máximo bonito no PC */
+  max-height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  border-radius: 15px;
+}
+
+#myCanvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: url('http://s2js.com/img/etc/flappyback.png') center/cover no-repeat;
+}
+
+.instructions {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  font-size: 2.5rem;
+  text-shadow: 3px 3px 6px rgba(0,0,0,0.7);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s;
+  z-index: 10;
+}
+
+.instructions.show {
+  opacity: 1;
+}
+
+/* Mensagem de Game Over (opcional - o JS já desenha, mas deixei um fallback bonito) */
+.game-over {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,0.7);
+  color: white;
+  padding: 20px 40px;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 2rem;
+  display: none;
+  z-index: 20;
+}

@@ -1,36 +1,23 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>php - churrasco Bird</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Pacifico"
-      rel="stylesheet"
-    />
-    <link rel="icon" href="liguiça.png" />
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Churrasco Bird</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="icon" href="./images/linguica.png" />
+  <link rel="stylesheet" href="./styles/styles.css" />
+</head>
+<body>
+  <div class="game-container">
+    <canvas id="myCanvas"></canvas>
+    <div class="instructions">
+      Toque ou clique para voar!<br>
+      <small>Evite os espetos e chegue até a churrasqueira!</small>
+    </div>
+  </div>
 
-    <!-- 👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻-->
-    <!-- Also uploaded the demo of this code in a gif : https://c.tenor.com/x8v1oNUOmg4AAAAd/tenor.gif-->
-    <!-- 👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻-->
-
-    <!-- 👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻-->
-    <!-- More html-css-js Games Calculators Games Cards Elements Projects on https://www.github.com/he-is-talha -->
-    <!-- 👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻-->
-  </head>
-  <body>
-    <canvas
-      id="myCanvas"
-      width="620"
-      height="480"
-      style="
-        background: url('http://s2js.com/img/etc/flappyback.png');
-        background-size: 100%;
-        height: 95%;
-      "
-    >
-      <script src="script.js"></script>
-    </canvas>
-  </body>
+  <script src="./scripts/script.js"></script>
+</body>
 </html>
