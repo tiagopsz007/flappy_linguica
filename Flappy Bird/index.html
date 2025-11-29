@@ -1,23 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>Churrasco Bird</title>
-  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>🔥 Churrasco Bird - Voe até a Churrasqueira!</title>
+  <meta name="description" content="Jogo divertido inspirado em Flappy Bird com tema de churrasco brasileiro. Ajude a linguiça a desviar dos espetos e chegar até a churrasqueira!">
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-  <link rel="icon" href="./images/linguica.png" />
-  <link rel="stylesheet" href="./styles/styles.css" />
+  <link rel="stylesheet" href="./styles/game.css">
 </head>
 <body>
-  <div class="game-container">
-    <canvas id="myCanvas"></canvas>
-    <div class="instructions">
-      Toque ou clique para voar!<br>
-      <small>Evite os espetos e chegue até a churrasqueira!</small>
+  <div class="game-wrapper">
+    <div class="game-header">
+      <h1 class="game-title">🔥 Churrasco Bird 🔥</h1>
+    </div>
+    
+    <div class="game-container">
+      <canvas id="gameCanvas" width="800" height="600"></canvas>
+      
+      <!-- Pre-start screen -->
+      <div id="prestart-screen" class="overlay-screen">
+        <div class="overlay-content animate-bounce">
+          <p class="overlay-title">Toque ou clique para voar!</p>
+          <p class="overlay-subtitle">Evite os espetos e chegue até a churrasqueira!</p>
+        </div>
+      </div>
+      
+      <!-- Game over screen -->
+      <div id="gameover-screen" class="overlay-screen hidden">
+        <div class="overlay-content game-over-box">
+          <p class="overlay-title">Game Over!</p>
+          <p class="score-text">Pontos: <span id="final-score">0</span></p>
+          <p class="highscore-text">Recorde: <span id="final-highscore">0</span></p>
+          <button id="restart-button" class="restart-btn">Jogar Novamente</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="game-footer">
+      <span>Recorde: <span id="highscore-display">0</span></span>
+      <span>Espaço ou clique para pular</span>
     </div>
   </div>
-
-  <script src="./scripts/script.js"></script>
+  
+  <script src="./scripts/game.js"></script>
 </body>
 </html>
